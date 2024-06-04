@@ -1,7 +1,7 @@
-##Bookstore Web Application (MERN Stack)
+## Bookstore Web Application (MERN Stack)
 This project is a web application developed using the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js. It allows users to browse a collection of books, search for specific titles, authors, or genres, view detailed information about each book, and submit their own reviews.
 
-#Features
+# Features
 Responsive User Interface: Built using React.js, ensuring a seamless experience across various devices.
 Search Functionality: Users can search for books by title, author, or genre.
 Detailed Book Information: Each book has its own details page displaying title, author, description, average rating, and user reviews.
