@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Search({ searchTerm, setSearchTerm }) {
   return (
-    <div className="d-flex align-items-center position-relative me-5 col-6 ">
+    <div className="d-flex align-items-center position-relative me-md-5  col-md-6 ms-2 ms-md-0">
       <i class="bi bi-search fs-5 position-absolute ms-3 "></i>
       <input
         type="text"
