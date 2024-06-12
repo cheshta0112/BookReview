@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import Search from "./Search";
 import { UserContext } from "../../context/UserContext";
 import axios from "axios";
+import { logout } from "../Core/_request";
 
 export default function Navbar({
   searchTerm,
@@ -14,9 +15,7 @@ export default function Navbar({
   const { user, setUser } = useContext(UserContext);
   const handleLogout = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/auth/logout", {
-        withCredentials: true,
-      });
+      const res = await logout();
       setUser(null);
       Navigate("/login");
     } catch (err) {

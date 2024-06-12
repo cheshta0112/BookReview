@@ -49,3 +49,14 @@ export const getReview = async (bookId) => {
     throw error;
   }
 };
+export const logout = async () => {
+  try {
+    const response = await axios.get(`${URL}/auth/logout`, {
+      withCredentials: true,
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Axios error:", error);
+    throw error;
+  }
+};
