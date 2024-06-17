@@ -4,9 +4,19 @@ const URL = process.env.REACT_APP_API_URL;
 export const BOOK_URL = `${URL}/book`;
 export const REVIEW_URL = `${URL}/review`;
 
-export const getAllBooks = async (email, username, password) => {
+export const getAllBooks = async () => {
   try {
     const response = await axios.get(`${BOOK_URL}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Axios error:", error);
+    throw error;
+  }
+};
+export const getSearchBooks = async (searchTerm) => {
+  try {
+    const response = await axios.get(`${BOOK_URL}/search?query=${searchTerm}`);
     console.log(response.data);
     return response.data;
   } catch (error) {

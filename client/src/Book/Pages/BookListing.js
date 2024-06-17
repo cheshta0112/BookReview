@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import Search from "../Components/Search";
-import { getAllBooks } from "../Core/_request";
+import { getAllBooks, getSearchBooks } from "../Core/_request";
 import Navbar from "../Components/Navbar";
 
 export default function BookListing() {
@@ -28,13 +28,14 @@ export default function BookListing() {
   useEffect(() => {
     const fetchBooks = async () => {
       if (searchTerm) {
-        const response = await fetch(
-          `http://localhost:5000/book/search?query=${searchTerm}`
-        );
+        const response = await getSearchBooks(searchTerm);
+        // fetch(
+        //   `http://localhost:5000/book/search?query=${searchTerm}`
+        // );
         console.log("response", response);
-        const result = await response.json();
+        // const result = await response.json();
 
-        setBooks(result);
+        setBooks(response);
       } else {
         setBooks(books);
       }
