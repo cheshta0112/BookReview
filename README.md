@@ -1,7 +1,8 @@
 ## Book Review Web Application (MERN Stack)
 This project is a web application developed using the MERN stack, which includes MongoDB, Express.js, React.js, and Node.js. It allows users to browse a collection of books, search for specific titles, authors, or genres, view detailed information about each book, and submit their own reviews.
 
-https://book-review-application-cheshta-pals-projects.vercel.app/auth
+
+https://book-review-application-pcji.vercel.app/auth
 
 
 
